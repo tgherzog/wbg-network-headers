@@ -1,0 +1,137 @@
+/* reset styles */
+#wbg-header, #wbg-footer,
+#wbg-footer a, #wbg-footer ul, #wbg-footer ol, #wbg-footer li, #wbg-footer div,
+#wbg-header a, #wbg-header ul, #wbg-header ol, #wbg-header li, #wbg-header div {
+  direction: rtl;
+}
+
+#wbg-header a.wbg-logo {
+  float: right;
+}
+
+/* for arabic only, the logo does not include text so we must include it in the template and style it */
+#wbg-header a.wbg-logo span {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 4px 0;
+  color: #b4b4b4;
+  font-weight: bold;
+}
+
+#wbg-header a.wbg-logo span.logo-name {
+  color: #fff;
+  margin-right: 48px;
+  margin-left: 8px;
+  padding-left: 8px;
+  border-left: 1px solid #6a6a6a;
+}
+
+#wbg-header .global-search {
+  margin: 8px 0 8px 10px;
+  float: left;
+}
+
+#wbg-header .search-text {
+  float: right;
+  /* width: 128px; */
+}
+
+#wbg-header .search-btn {
+  background: transparent url(images/globalsearch-icon-ar.png) no-repeat -2px 0;
+  margin: 0 -1px 0 0;
+  padding: 0 0 0 7px;
+}
+
+#wbg-header .global-language-selector {
+  float: left;
+  margin: 8px 0 8px 10px;
+  padding: 0 0 0 6px;
+  border-right: none;
+  border-left: 1px solid #6A6A6A;
+  *width: 310px;
+}
+#wbg-header .global-language-selector ul li {
+  float: right;
+}
+
+#wbg-header .global-language-selector ul li a.more {
+  background-position: -925px -258px;
+}
+
+#wbg-header .global-nav ul li {
+  float: right;
+}
+
+#wbg-header .global-nav ul li:first-child {
+  padding: 15px 12px;
+  padding-right: 0;
+}
+
+#wbg-footer .footer-breadcrumb ul {
+  float: right;
+}
+
+#wbg-footer .footer-breadcrumb ul li {
+  float: right;
+}
+
+#wbg-footer .footer-breadcrumb ul li.first {
+  padding: 0 5px;
+  padding-right: 0;
+}
+
+#wbg-footer .columns {
+  float: right;
+}
+
+#wbg-footer .link-set-1 {
+  margin: 0;
+  margin-left: 5px;
+}
+
+#wbg-footer .link-set-2 {
+  float: right;
+}
+
+#wbg-footer .link-block {
+  float: right;
+}
+
+#wbg-footer .link-block.first {
+  margin: 0 6px;
+  margin-right: 0;
+}
+
+#wbg-footer .link-block.last {
+  margin: 0 6px;
+  margin-left: 0;
+}
+
+#wbg-footer span.wbg-logo {
+  float: right;
+  padding: 0;
+  padding-left: 30px;
+  border: none;
+  border-left: 1px solid #d2d2d2;
+}
+
+#wbg-footer.wbg-ar span.wbg-logo { background: transparent url(images/wbg-footer-ar.gif) no-repeat right; width: 162px; }
+
+#wbg-footer .worldbank-partner {
+  float: right;
+  margin: 6px 30px 0 0;
+  *padding-left: 30px;
+}
+
+#wbg-footer .worldbank-partner a {
+  padding: 0 0 0 10px;
+}
+
+#wbg-footer .misc-links-list {
+  float: right;
+}
+
+#wbg-footer .hotlineNumber {
+  float: left;
+  width: 20%;
+}

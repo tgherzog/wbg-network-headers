@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+
+/* templates can assume declaration of clear-block */
+.clear-block { display: block; }
+.clear-block:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+#root {
+  background: url(bleed_page.png) 50% 0% repeat-y;
+  padding-bottom: 20px;
+}
+
+/* site is responsible to set header/footer width, and site-name if used */
+#wbg-header, #body, #wbg-site-name, #wbg-footer {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+</style>
+<link rel=stylesheet href="readme.css"/>
+<link rel=stylesheet href="network.css"/>
+</head>
+<body>
+<div id="root">
+
+<div id="wbg-header" class="wbg-en clear-block">
+
+</div><!-- end wbg-header -->
+
+<!-- wbg-site-name is not part of the corporate header/footer, but a common element on many Bank sites -->
+<div id="wbg-site-name" class="clear-block"><a href="http://www.worldbank.org">World Bank Corporate Headers &amp; Footers</a></div>
+
+<div id="body">
+<h1>Overview</h1>
+
+<p>This Readme file gives instructions for implementing the new (as of April 2014) World Bank corporate header and footer on any given website. These templates
+are designed for portability: as few code changes as possible, and minimal if any side effects on your layout and page styles.</p>
+
+<p>This file itself demonstrates how the templates work. The headers and footers are being added dynamically via <a href="http://jquery.com">JQuery</a>. Change the URL to <code>readme.htm?lang=es</code>
+to see the Spanish version. Use <code>en|fr|ar|zh</code> for English, French, Arabic and Chinese respectively.</p>
+
+<h1>File guide</h1>
+<table>
+<tr><td>header_XX.htm</td><td>Contains the header for the corresponding language</td></tr>
+<tr><td>footer_XX.htm</td><td>Contains the footer for the corresponding language, including a static breadcrumb</td></tr>
+<tr><td>footer_XX-nobc.htm</td><td>Contains the footer for the corresponding language, without the breadrumb. Use this file if your site generates a dynamic breadcrumb (see <a href="footer_en.htm">footer_en.html</a> for the markup codes)</td></tr>
+<tr><td>network.css</td><td>CSS styles for all header/footer elements</td></tr>
+<tr><td>network-rtl.css</td><td>CSS styles for Arabic and other RTL languages</td></tr>
+<tr><td>images/</td><td>Sub-directory for sprites, logos and other images</td></tr>
+</table>
+
+
+<h1>Implementation</h1>
+<div class="indent">
+
+<h2>Add CSS styles to your &lt;head&gt; section</h2>
+
+<pre>
+&lt;head&gt;
+&lt;link rel=stylesheet href="network.css" type="text/css"/&gt;
+&lt;link rel=stylesheet href="network-rtl.css" type="text/css"/&gt; <em>&lt;!-- arabic only --&gt;</em>
+&lt;/head&gt;
+</pre>
+
+<h2>Include wbg-header and wbg-footer and (optional) wbg-site-name elements in your page template</h2>
+
+<p>The header and footer must be &lt;div&gt; elements with a ID attribute of "wbg-header" and "wbg-footer" respectively. Additionally the class attribute should be set to
+<code>"wbg-XX clear-block"</code> where XX is the 2-character language code. Omitting <code>wbg-XX</code> is the same as English.</p>
+
+<p>The optional "wbg-site-name" element defines the red site name bar prominent on many
+Bank websites (guidance for this will likely change in 2014).</p>
+
+<p>The templates are designed for use with
+file include mechanisms found in many programming languages. Here is how you would implement the header &amp; footer in PHP for an English site:
+
+<pre>
+&lt;body&gt;
+&lt;?php $language = 'en'; ?&gt;
+&lt;div id="wbg-header" class="wbg-en clear-block"&gt;
+  &lt;?php require("header_{$language}.htm"); ?&gt;
+&lt;/div&gt;
+
+&lt;div id="wbg-site-name" class="clear-block"&gt;
+  &lt;a href="http://yoursite.worldbank.org"&gt;Your site name here&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- your page code here --&gt;
+
+&lt;div id="wbg-footer" class="wbg-en clear-block"&gt;
+  &lt;?php require("footer_{$language}.htm"); ?&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+<p><strong>Note:</strong> the template does not define any background styles or root elements (such as the one in this example) for the page as a whole.</p>
+
+<h2>Define the width and margin of the #wbg-header, #wbg-footer and #wbg-site-name elements according to your site's design</h2>
+<p>These elements are left undefined in the template to support slightly different page widths to a minimum of about 800px. Usually these elements are the same
+width as the content section of your page layout. Here is a typical example (and the one used on in this readme file and on data.worldbank.org):</p>
+<pre>
+#wbg-header, #wbg-site-name, #wbg-footer {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+</pre>
+
+<h2>If necessary, define the "clear-block" class in your site's CSS</h2>
+<p>Many sites will already have this element. If yours does not, copy the definition from this readme file.</p>
+</div>
+
+</div><!-- end body -->
+
+<div id="wbg-footer" class="wbg-en clear-block">
+
+</div><!-- end wbg-footer -->
+
+</div><!-- end ROOT -->
+
+<!-- For demonstration purposes only: this javascript loads headers & footers dynamically -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+
+function queryString() {
+
+  var q = location.search.substring(1, location.search.length);
+  
+  q = q.replace(/\+/g, ' ').split('&');
+  var params = {}, key, value, pair;
+  
+  for(var i=0;i<q.length;i++) {
+    pair = q[i].split('=');
+	key = unescape(pair[0]);
+	value = pair.length == 2 ? unescape(pair[1]) : key;
+	params[key] = value;
+  }
+
+  return params;
+}
+
+$(document).ready(function() {
+
+  var q = queryString();
+  var lang = q['lang'] || "";
+
+  if( ! lang.match(/^\w{2}$/) ) lang = 'en'; // sanity check
+
+  $('#wbg-header, #wbg-footer').removeClass('wbg-en').addClass('wbg-' + lang);
+  if( lang == 'ar' )
+    $('head').append('<link rel="stylesheet" href="network-rtl.css" type="text/css"/>');
+
+  _copyrightYear = false; // suppress the copyright year to suppress offending calls to document.write in footer
+  $('#wbg-header').load('header_' + lang + '.htm');
+  $('#wbg-footer').load('footer_' + lang + '.htm');
+});
+
+</script>
+
+</body>
+</html>

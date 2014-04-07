@@ -1,0 +1,65 @@
+/* styles exclusive to the readme file, and to verify the independence of the styles in network.css.
+ * This file should not be included in production.
+*/
+
+body {
+  background: #d8dcd0;
+  color: purple;
+  font: 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+}
+
+ol, ul { font-style: italic; }
+
+a {
+  color: green;
+  font-style: italic;
+}
+
+p {
+  margin: 1em 0;
+}
+
+#body {
+  padding: 20px 0;
+}
+
+.indent {
+  margin: 0 4em;
+}
+
+h1, h2 {
+  color: darkblue;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+table {
+  width: 75%;
+  margin: 1em auto;
+}
+
+table td {
+  padding: 4px 8px;
+  vertical-align: top;
+}
+
+table td:first-child {
+  white-space: nowrap;
+}
+
+pre {
+  background: #ddd;
+  padding: 0.5em;
+}
+
+code {
+  padding: 0 0.5em;
+  background: #ddd;
+}
