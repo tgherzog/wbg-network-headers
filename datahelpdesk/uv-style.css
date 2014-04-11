@@ -23,6 +23,12 @@ position: relative;
 
 #main-content {margin: 20px 25px 10px; }
 
+#wbg-header, #wbg-footer, #main-content, #wbg-site-name {
+  width: 948px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 /*--------------header-----------------*/
 
 #header a, #header a:visited, #header a:hover{text-decoration: none; color: #850000;}
@@ -215,7 +221,7 @@ border-left:2px solid #FFFFFF;
 
 /*--------------local navigation-----------------*/
 #local-nav {
-  margin: 5px 25px;
+  margin: 0 25px 5px;
 }
 
 #local-nav .site-name {
@@ -497,6 +503,7 @@ p.top-smlink {
 .uvBody {
   background: transparent;
   border-top: none;
+  padding: 25px 0;
 }
 
 .uvModule {
@@ -589,6 +596,10 @@ h1, h1.uvPageTitle {
 
 span.acronym {
   border-bottom: 1px dotted #a92123;
+}
+
+div.ender {
+  height: 20px;
 }
 
 
