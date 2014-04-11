@@ -1,0 +1,86 @@
+<div id="wrapper" class="clear-block">
+
+   <!--START HEADER-->
+     <div id="header" class="clear-block">
+    <!--Start Header -->
+    <div class="global-languages">
+      <!--Global Languages -->
+      <a class="active-language">English</a> <a href="http://www.bancomundial.org/">Espa&ntilde;ol</a> | <a href="http://www.banquemondiale.org/">Fran&ccedil;ais</a> | <a href="http://www.albankaldawli.org/"><b>&#x0639;&#x0631;&#x0628;&#x064A;</b></a> | <a href="http://www.worldbank.org/russian">&#x0420;&#x0443;&#x0441;&#x0441;&#x043A;&#x0438;&#x0439;</a> | <a class="cn" href="http://www.worldbank.org.cn/Chinese/">&#x4E2D;&#x6587;</a> | <a href="http://www.worldbank.org/languages"> <img alt="All languages" src="https://fb.worldbank.org/uv/more-arrow.png" title="All languages"  border="0" /></a></div>
+    <!--End Global Languages -->
+    <div class="logo-search-box">
+      <!--Binding box for Logo and Search -->
+      <a class="logo" href="http://www.worldbank.org">The World Bank Working for a World Free of Poverty</a>
+      <!--Global Search-->
+      <div id="global-search">
+        <form name='searchformIntranet' method='post' action='javascript:doExternalSearch("http://search.worldbank.org/all?qterm=@@^^http://search.worldbank.org/projects?qterm=@@^^http://search.worldbank.org/research?qterm=@@^^http://search.worldbank.org/news?qterm=@@^^http://search.worldbank.org/multimedia?qterm=@@^^http://search.worldbank.org/businesswithbank?qterm=@@^^http://publications.worldbank.org/ecommerce/catalog/simple-search?has%5fresults%5fp=1&search%5ftype%5fto%5fpass=title&search%5ftext=@@^^")'>
+          <label for= 'Search' accesskey='S'></label>
+          <select id='Search' name='chooseSite' style="display: none;">
+            <option value='All' >All</option>
+          </select>
+          <label for='keyword' accesskey='K'></label>
+          <input id='keyword' type='text' name='query' size='15' class='search-text' />
+          <a class="search-submit-text" href='javascript:doExternalSearch("http://search.worldbank.org/all?qterm=@@^^")'>GO <img alt='Click here for search results' src="https://fb.worldbank.org/uv/more-arrow.png" border=0 width='4' height='7' title='Click here for search results'  class="search-submit" style="top: 3px; right: -5px;" /></a>
+        </form>
+      </div>
+      <!-- End Global Search -->
+    </div>
+    <!-- End Binding box for Logo and Search -->
+    <!--Global Social Media -->
+    <p class="top-smlink" align="right"><a href="http://plus.google.com/109683442790400854464/"><img alt="Google+ page of the World Bank" src="https://fb.worldbank.org/uv/googlepageicon.png" title="Google+" border="0"  /></a> |  <a href="http://www.facebook.com/worldbank"><img alt="Open World Bank Facebook page" src="https://fb.worldbank.org/uv/icon-fb-sm.png" title="Facebook" border="0" /></a> | <a href="http://www.twitter.com/worldbank"><img alt="Open World Bank Twitter"  src="https://fb.worldbank.org/uv/icon-twitter-sm.png" title="Twitter" border="0" /></a></p>
+    <!-- -->
+  </div>
+  <!--End header -->
+  <!--Global Navigation -->
+  <div id="global-nav">
+    <table id="nav-table" border="0" cellpadding="0" cellspacing="0" width="948">
+      <tbody>
+        <tr>
+          <td id="home" align="left" width="27"><a href="http://www.worldbank.org/" class="home"><img alt="World Bank home link" src="https://fb.worldbank.org/uv/home-icon-grey.png"  title="World Bank home link" border="0" /></a></td>
+          <td class="pre-active"><a href="http://web.worldbank.org/WBSITE/EXTERNAL/EXTABOUTUS/0,,pagePK:50004410~piPK:36602~theSitePK:29708,00.html">About</a></td>
+          <td class="active"><a href="http://data.worldbank.org/">Data</a></td>
+          <td><a href="http://econ.worldbank.org/WBSITE/EXTERNAL/EXTDEC/0,,menuPK:476823~pagePK:64165236~piPK:64165141~theSitePK:469372,00.html">Research</a></td>
+          <td><a href="http://www.worldbank.org/wbi">Learning</a></td>
+          <td><a href="http://web.worldbank.org/WBSITE/EXTERNAL/NEWS/0,,pagePK:34382~piPK:34439~theSitePK:4607,00.html">News</a></td>
+          <td><a href="http://web.worldbank.org/WBSITE/EXTERNAL/PROJECTS/0,,menuPK:115635~pagePK:64020917~piPK:64021009~theSitePK:40941,00.html">Projects &amp; Operations</a></td>
+          <td class="last"><a href="http://www.worldbank.org/reference" class="last">Publications</a></td>
+
+          <td class="secondary"><a href="http://web.worldbank.org/WBSITE/EXTERNAL/COUNTRIES/0,,pagePK:180619~theSitePK:136917,00.html" class="countries">Countries</a></td>          
+          <td class="secondary last"><a href="http://www.worldbank.org/html/extdr/thematic.htm" class="topics last2">Topics</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!--End Global Navigation -->
+
+  
+<!--END HEADER-->
+
+<!--BEGIN DATA NAVIGATION-->
+<div id="local-nav" class="clear-block">
+
+<div id="wbg-site-name" class="clear-block"><a href="http://data.worldbank.org">Data</a></div>
+
+<div class="local-nav-links clear-block">
+
+<ul class="links primary-links clear-block">
+<li class="country first"><a href="http://data.worldbank.org/country">By Country</a></li>
+<li class="topic"><a href="http://data.worldbank.org/topic">By Topic</a></li>
+<li class="indicator"><a href="http://data.worldbank.org/indicator">Indicators</a></li>
+<li class="data-catalog"><a href="http://data.worldbank.org/data-catalog">Data Catalog</a></li>
+<li class="http:--microdata-worldbank-org"><a href="http://microdata.worldbank.org" title="">Microdata</a></li>
+<li class="http:--blogs-worldbank-org-opendata last"><a href="http://blogs.worldbank.org/opendata" title="">Blog</a></li>
+</ul>
+
+<ul class="links secondary-links clear-block">
+<li class="news first"><a href="http://data.worldbank.org/news">News</a></li>
+<li class="pages-8"><a href="http://data.worldbank.org/about" title="">About</a></li>
+<li class="pages-9"><a class="active" href="http://datahelpdesk.worldbank.org">Support</a></li>
+<li class="pages-7 last"><a href="http://data.worldbank.org/products">Products</a></li>
+</ul>
+
+</div></div>
+
+<!-- END DATA NAVIGATION-->
+
+<div id="main-content" class="clear-block">
