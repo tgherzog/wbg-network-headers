@@ -1,0 +1,403 @@
+#main {
+  .locale {
+    color: $grey;
+	font-size: 11px;
+    padding: $gutter 0 0 $gutter/2;
+
+	> * {
+	  padding: 0 8px;
+	  border-right: 1px solid $grey;
+	}
+
+	> *:last-child {
+	  border-right: none;
+	}
+
+    a {
+      color: inherit;
+    }
+    span {
+      color: $base;
+      font-weight: bold;
+    }
+  }
+  .header {
+    padding: $gutter/2;
+    position: relative;
+    .links {
+      a {
+        color: inherit;
+        font-size: $large;
+        &:hover {
+          color: $red;
+          text-decoration: none;
+        }
+        &:before {
+          @include icon();
+        }
+        &.email:before { content: 'e'; }
+        &.facebook:before { content: 'f'; }
+        &.twitter:before { content: 't'; }
+        &.gplus:before { content: 'p'; }
+        &.github:before { content: 'g'; }
+        &.linkedin:before { content: 'l'; }
+        span {
+          display: none;
+        }
+      }
+    }
+    h1 {
+      font-size: $huge;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+  .main {
+    @include clearfix();
+    border: 1px solid $line;
+    border-bottom: 2px solid $red;
+    border-top: 2px solid $red;
+    padding: $gutter;
+    position: relative;
+  }
+  .sidebar {
+    font-size: $larger;
+    ul {
+      border-top: 1px solid $line;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      h2,
+      h3 {
+        font-size: inherit;
+        margin: 0;
+        &:before {
+          @include icon();
+          content: 'r';
+          margin-right: $gutter/2;
+        }
+      }
+      h2:before {
+        content: 'h';
+      }
+      li {
+        border: 1px solid tint($line, 10%);
+        border-top: 0;
+        padding: 1.5*$gutter/2;
+        &.active {
+          background: tint($light, 10%);
+          h3:before {
+            content: 'd';
+          }
+          a {
+            font-weight: bold;
+          }
+          li a {
+            font-weight: inherit;
+          }
+        }
+        ul {
+          border: 0;
+          margin-left: $gutter + $gutter/4;
+        }
+        li {
+          border: 0;
+          color: tint($base, 10%);
+          margin-top: $gutter/2;
+          padding: 0;
+        }
+
+		.here a {
+		  color: #b00;
+		}
+      }
+    }
+    a {
+      color: inherit;
+    }
+  }
+  .body {
+	h1 {
+	  border-top: 1px solid $red;
+	  margin-top: 1.5em;
+	  padding-top: 0.5em;
+	}
+
+	h4 {
+	  font-weight: bold;
+	}
+
+	h3 {
+	  font-size: 16px;
+	}
+
+    a {
+      color: $red;
+	  text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+    }
+
+	table {
+	  border-collapse: collapse;
+	  margin-bottom: 1em;
+
+	  tr:nth-child(even) { background: $light; }
+
+	  td, th {
+		padding: 0.25em 0.75em;
+		border: 1px solid tint($line, 10%);
+	  }
+
+	  th {
+	   vertical-align: bottom;
+	   background: shade($light, 3%);
+	  }
+
+	  td {
+		vertical-align: top;
+	  }
+
+	  &.w30 {
+	    td, th {
+		  &:first-child { width: 30% }
+		}
+	  }
+	}
+
+	#models-container {
+	  margin-bottom: 1em;
+	  font-size: 100%;
+	  
+	  .ui-tabs-nav a {
+	    text-decoration: none;
+	  }
+
+	  div p {
+	    font-size: 0.9em;
+		margin: 0 0 1em;
+	  }
+	}
+
+	.ui-corner-all { border-radius: 0 };
+	
+	.clear-block {
+	  @include clearfix();
+	}
+
+	.pullquote {
+	  margin: 0 0 1em 1em;
+	  float: right;
+	  display: block;
+	  width: 40%;
+	  font-family: Georgia,serif;
+	  font-size: 1.5em;
+	  font-style: italic;
+	  line-height: 1.25em;
+	  color: $red;
+	}
+
+	div.aside {
+	  float: right;
+	  display: block;
+	  margin: 0 0 1em 1em;
+	  max-width: 275px;
+	  
+	  p { margin: 0 }
+	  .caption {
+	    font-size: 0.9em;
+		font-style: italic;
+	  }
+	}
+
+	blockquote {
+	  font-style: italic;
+	  background: #eee;
+	  padding: 1em;
+
+	  ul { padding-left: 1.25em }
+	  p { margin: 0 }
+	  p + p, li + li p { margin-top: 1em }
+	}
+
+	/* bold first link in lists with paragraph styling, for emphasis */
+	li > p > a:first-child {
+	  font-weight: bold;
+	}
+
+	.center {
+	  text-align: center;
+	}
+
+	.space-before {
+	  margin-top: 4em;
+	}
+
+	/* We repurpose the <cite> tag to indicate text that should be initially hidden and shown with a "more" link,
+	   which is inserted by Javascript
+	*/
+	cite {
+	  font-style: inherit;
+	  display: none;
+	}
+
+	a.more {
+	}
+
+	p.issue a {
+	  font-weight: bold;
+	  color: blue;
+	  text-decoration: none;
+	}
+  }
+
+  /* for the style guide */
+  .body.guide {
+	blockquote {
+	  margin: 0 0 $gutter;
+	  font-style: normal;
+	  color: #009;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  #main {
+    .header {
+      .links {
+        border-bottom: 1px solid $line;
+        @include clearfix;
+        margin: (-$gutter/2) (-$gutter/2) $gutter/2;
+        a {
+          border-left: 1px solid $line;
+          @include box-sizing(border-box);
+          display: block;
+          float: left;
+          margin: 0;
+          padding: $gutter/2 0;
+          text-align: center;
+          width: 20%;
+          &:first-child {
+            border: 0;
+          }
+        }
+      }
+      .menu {
+        color: $grey;
+        float: left;
+        margin-right: $gutter/2;
+        &:before {
+          content: 'r';
+        }
+        &.active {
+          &:before {
+            content: 'd';
+          }
+        }
+      }
+      .options {
+        border-top: 1px solid $line;
+        @include clearfix;
+        clear: both;
+        display: none;
+        margin: 0 (-$gutter/2) $gutter/2;
+        a {
+          border-bottom: 1px solid $line;
+          color: inherit;
+          display: block;
+          padding: $gutter/2;
+        }
+        &.show {
+          display: block;
+        }
+      }
+    }
+    .main {
+      border-left: 0;
+      border-right: 0;
+      padding: $gutter/2;
+    }
+    .sidebar {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 641px) {
+  #main {
+    .header {
+      .links {
+        float: right;
+        padding: $gutter/2 0;
+        a {
+          margin-left: $gutter/2;
+        }
+      }
+      .menu {
+        display: none;
+      }
+      .options {
+        display: none;
+      }
+    }
+    .sidebar + .body {
+      margin-right: $sidebar - 2*$gutter;
+    }
+    .body {
+      border-right: 1px solid tint($line, 10%);
+      padding-right: $gutter;
+    }
+    .sidebar {
+      float: right;
+      width: $sidebar - 3*$gutter;
+      &.sticky {
+        margin-right: $gutter;
+        margin-top: $gutter;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      h2,
+      h3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  #main {
+    .sidebar + .body {
+      margin-right: $sidebar;
+    }
+    .sidebar {
+      width: $sidebar - $gutter;
+    }
+  }
+}
+
+@media (min-width: 870px) {
+  #main {
+    .sidebar + .body {
+      margin-right: $sidebar + $gutter;
+    }
+    .sidebar {
+      width: $sidebar;
+    }
+  }
+}
+
+@media (max-width: 800px) and (min-width: 641px) {
+  #main .body {
+	.pullquote, div.aside { max-width: 175px }
+  }
+}
+
+@media (max-width: 440px) {
+  #main .body {
+	.pullquote, div.aside { display: none }
+  }
+}
